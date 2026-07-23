@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MCA Orientation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#4a0404,#6d071a,#800020,#5b0f18);
+background-size:400% 400%;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+/* Floating Circles */
+
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.12);
+animation:float 10s linear infinite;
+}
+
+.c1{
+width:180px;
+height:180px;
+left:8%;
+top:10%;
+}
+
+.c2{
+width:120px;
+height:120px;
+right:10%;
+top:18%;
+animation-duration:12s;
+}
+
+.c3{
+width:220px;
+height:220px;
+bottom:-60px;
+left:40%;
+animation-duration:15s;
+}
+
+.c4{
+width:150px;
+height:150px;
+bottom:8%;
+right:15%;
+animation-duration:9s;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+}
+100%{
+transform:translateY(-80px) rotate(360deg);
+}
+}
+
+/* Glass Card */
+
+.container{
+width:900px;
+padding:50px;
+border-radius:25px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+text-align:center;
+color:white;
+z-index:10;
+border:1px solid rgba(255,255,255,.25);
+}
+
+.logo{
+font-size:45px;
+font-weight:bold;
+margin-bottom:10px;
+color:white;
+}
+
+.typing{
+font-size:22px;
+font-weight:600;
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid white;
+width:0;
+margin:auto;
+animation:typing 4s steps(30,end) forwards,blink .8s infinite;
+}
+
+@keyframes typing{
+from{width:0;}
+to{width:100%;}
+}
+
+@keyframes blink{
+50%{border-color:transparent;}
+}
+
+p{
+margin-top:25px;
+font-size:18px;
+line-height:1.8;
+color:#f5f5f5;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 40px;
+background:white;
+color:#800020;
+font-size:18px;
+font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn:hover{
+background:#800020;
+color:white;
+transform:scale(1.08);
+box-shadow:0 0 20px white;
+}
+
+nav{
+margin-top:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd6d6;
+}
+
+footer{
+margin-top:45px;
+font-size:14px;
+color:#eee;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+
+<div class="container">
+
+<div class="logo">
+🎓 MCA ORIENTATION
+</div>
+
+<div class="typing">
+Welcome to MCA Orientation 2026
+</div>
+
+<p>
+Start your academic journey with confidence.
+Meet experienced faculty members, explore the campus,
+discover exciting opportunities, and connect with your
+future classmates through our MCA Orientation Program.
+</p>
+
+<a href="about.html" class="btn">
+Explore →
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="schedule.html">Schedule</a>
+<a href="speakers.html">Speakers</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<footer>
+© 2026 MCA Orientation | Designed by MCA Students
+</footer>
+
+</div>
+
+</body>
+</html>
