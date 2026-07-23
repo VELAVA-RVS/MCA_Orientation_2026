@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RVS College Of Arts And Science — MCA Department Event</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+  body{
+    font-family:'Poppins', sans-serif;
+    background:#f5f5f7;
+    color:#222;
+  }
+
+  /* Navbar */
+  .navbar{
+    background:#4b0d17;
+  }
+  .navbar-brand{
+    color:#fff;
+    font-weight:600;
+  }
+  .nav-link{
+    color:#f1e3e3 !important;
+  }
+  .nav-link.active, .nav-link:hover{
+    color:#fff !important;
+    border-bottom:2px solid #b8894a;
+  }
+
+  /* Section heading */
+  .section-title{
+    text-align:center;
+    font-weight:700;
+    color:#4b0d17;
+    margin-bottom:8px;
+  }
+  .section-sub{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+  }
+
+  /* Speaker card */
+  .speaker-card{
+    background:#fff;
+    border:1px solid #e2e2e2;
+    border-radius:10px;
+    padding:25px 18px;
+    text-align:center;
+    height:100%;
+    transition:box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .speaker-card:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transform:translateY(-4px);
+  }
+  .speaker-avatar{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#4b0d17;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    font-size:1.2rem;
+    margin:0 auto 14px;
+  }
+  .speaker-name{
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:2px;
+  }
+  .speaker-org{
+    font-size:0.82rem;
+    color:#777;
+    margin-bottom:10px;
+  }
+  .speaker-tag{
+    display:inline-block;
+    background:#4b0d17;
+    color:#fff;
+    font-size:0.72rem;
+    padding:4px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+  }
+  .speaker-bio{
+    font-size:0.85rem;
+    color:#555;
+    margin-bottom:10px;
+    min-height:70px;
+  }
+  .speaker-topic{
+    font-size:0.78rem;
+    font-weight:600;
+    color:#4b0d17;
+    border-top:1px dashed #ddd;
+    padding-top:10px;
+    margin-bottom:12px;
+  }
+  .speaker-social a{
+    display:inline-flex;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#f0f0f0;
+    color:#4b0d17;
+    align-items:center;
+    justify-content:center;
+    margin:0 4px;
+    transition:background 0.25s ease, color 0.25s ease;
+  }
+  .speaker-social a:hover{
+    background:#4b0d17;
+    color:#fff;
+  }
+
+  footer{
+    background:#4b0d17;
+    color:#f1e3e3;
+    text-align:center;
+    padding:18px;
+    font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar: each item links to a separate page (not scroll anchors) -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">RVS College — Dept. of MCA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link active" href="speakers.html">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="text-center py-5" style="background:#4b0d17;color:#fff;">
+  <div class="container py-4">
+    <h1 class="fw-bold">Departmental Event Programme</h1>
+    <p class="mb-0">Department of MCA, RVS College Of Arts And Science</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title">Speakers</h2>
+    <p class="section-sub">Meet the faculty and guests leading today's sessions.</p>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="speaker-card">
+          <div class="speaker-avatar">GP</div>
+          <div class="speaker-name">Dr. G. Purusothaman</div>
+          <div class="speaker-org">Department of MCA</div>
+          <span class="speaker-tag">Associate Professor &amp; Head</span>
+          <p class="speaker-bio">Special Address for MCA students and guidance on academic excellence.</p>
+          <div class="speaker-topic">Special Address</div>
+          <div class="speaker-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="speaker-card">
+          <div class="speaker-avatar">PN</div>
+          <div class="speaker-name">Dr. P. Navaneetham</div>
+          <div class="speaker-org">School of Computer Studies</div>
+          <span class="speaker-tag">Director of SCS</span>
+          <p class="speaker-bio">Power Seminar on Internet of Things (IoT) and emerging technologies.</p>
+          <div class="speaker-topic">Power Seminar on IoT</div>
+          <div class="speaker-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="speaker-card">
+          <div class="speaker-avatar">LV</div>
+          <div class="speaker-name">Mr. L. Velava</div>
+          <div class="speaker-org">Department of MCA</div>
+          <span class="speaker-tag">Faculty Incharge</span>
+          <p class="speaker-bio">Ice Breaking Activities to improve confidence, communication and teamwork.</p>
+          <div class="speaker-topic">Ice Breaking Session</div>
+          <div class="speaker-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="speaker-card">
+          <div class="speaker-avatar">KS</div>
+          <div class="speaker-name">Ms. K. Swathy</div>
+          <div class="speaker-org">Department of MCA</div>
+          <span class="speaker-tag">Faculty - MCA</span>
+          <p class="speaker-bio">Certificate Verification and student interaction session for newly admitted MCA students.</p>
+          <div class="speaker-topic">Certificate Verification</div>
+          <div class="speaker-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>RVS College Of Arts And Science</strong> &nbsp;|&nbsp; Department of MCA
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
