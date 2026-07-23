@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | MCA Orientation 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        /* HEADER */
+        .main-header {
+            background-color: #800000;
+            /* Deep Crimson Maroon */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo svg {
+            margin-right: 10px;
+            width: 28px;
+            height: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffffff;
+            border-bottom-color: #FFC107;
+            /* Gold active indicator */
+        }
+
+        /* ANNOUNCEMENT BAR */
+        .announcement-bar {
+            background-color: #222222;
+            /* Dark Gray */
+            color: white;
+            padding: 10px 8%;
+            font-size: 13.5px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 3px solid #800000;
+        }
+
+        .announcement-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .announcement-label {
+            color: #FFC107;
+            /* Gold label */
+            font-weight: 700;
+            margin-right: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .announcement-text {
+            font-weight: 500;
+            color: #f1f1f1;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: calc(100vh - 120px);
+            /* Adjust based on header & announcement */
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+                url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: #FFC107;
+            /* Gold */
+        }
+
+        .hero p {
+            width: 70%;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 14px 36px;
+            background: #FFC107;
+            /* Gold */
+            color: #111111;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all .3s ease;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #800000;
+            /* Maroon on hover */
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(128, 0, 0, 0.4);
+        }
+
+        /* SECTION TITLE */
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #800000;
+            /* Deep Maroon */
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .title::after {
+            content: "";
+            width: 70px;
+            height: 4px;
+            background: #FFC107;
+            /* Gold */
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* MISSION */
+
+        .mission {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            color: #333333;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #800000;
+            /* Deep Maroon background on hover */
+            border-color: #800000;
+            color: #ffffff;
+            box-shadow: 0 15px 30px rgba(128, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* HIGHLIGHTS / UNIQUE POINTS */
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .highlight-card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 15px;
+            transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            border-color: #800000;
+            /* Maroon border on hover */
+            box-shadow: 0 15px 30px rgba(128, 0, 0, 0.1);
+        }
+
+        .highlight-icon {
+            font-size: 32px;
+            display: inline-block;
+        }
+
+        .highlight-card h3 {
+            color: #800000;
+            /* Deep Maroon title */
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .highlight-card p {
+            line-height: 1.6;
+            color: #555555;
+            font-size: 14.5px;
+        }
+
+        /* TEAM */
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .member {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: #800000;
+        }
+
+        .member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #800000;
+            /* Deep Maroon image border */
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .member h3 {
+            margin-bottom: 8px;
+            color: #800000;
+            /* Deep Maroon team member name */
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .member p {
+            color: #666666;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat {
+            background: #ffffff;
+            padding: 40px 20px;
+            border-radius: 15px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: scale(1.03);
+        }
+
+        .stat h2 {
+            font-size: 48px;
+            color: #800000;
+            /* Deep Maroon stats number */
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            color: #555555;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* TESTIMONIAL */
+
+        .testimonial {
+            background: #fdf8f8;
+            /* Soft light maroon tint background */
+            padding: 40px;
+            border-left: 5px solid #800000;
+            /* Deep Maroon left border */
+            border-radius: 12px;
+            margin: 50px auto 20px;
+            max-width: 800px;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #444444;
+            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.02);
+        }
+
+        .testimonial b {
+            color: #800000;
+            font-style: normal;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background: #800000;
+            /* Deep Maroon CTA background */
+            color: white;
+            padding: 90px 20px;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .cta .btn {
+            background: #FFC107;
+            /* Gold */
+            color: #111111;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.25);
+        }
+
+        .cta .btn:hover {
+            background: #ffffff;
+            color: #800000;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #111111;
+            /* Dark footer */
+            color: #888888;
+            font-size: 14px;
+            border-top: 1px solid #222222;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 5%;
+            }
+
+            .main-header {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 5%;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 24px;
+                height: 18px;
+                cursor: pointer;
+            }
+
+            .menu-toggle .bar {
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            /* Hamburger transform to X */
+            .menu-toggle.is-active .bar:nth-child(1) {
+                transform: translateY(7.5px) rotate(45deg);
+            }
+
+            .menu-toggle.is-active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.is-active .bar:nth-child(3) {
+                transform: translateY(-7.5px) rotate(-45deg);
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                margin-top: 15px;
+                padding: 15px 0 5px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.is-active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0;
+                font-size: 16px;
+                padding: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .announcement-bar {
+                justify-content: center;
+                text-align: center;
+                padding: 8px 5%;
+                font-size: 12.5px;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 450px;
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                width: 90%;
+                font-size: 16px;
+            }
+
+            .highlights-grid {
+                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .highlight-card {
+                padding: 25px 20px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 15px;
+            }
+
+            .stat h2 {
+                font-size: 36px;
+            }
+
+            .testimonial {
+                padding: 30px 20px;
+                font-size: 15.5px;
+                margin: 40px auto 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 50px 4%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .logo svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 15px;
+                padding: 3px 0;
+            }
+
+            .hero {
+                min-height: 380px;
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                width: 100%;
+                font-size: 14.5px;
+            }
+
+            .btn {
+                margin-top: 30px;
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .title {
+                font-size: 28px;
+                margin-bottom: 35px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .highlight-card {
+                padding: 20px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .stat {
+                padding: 20px 10px;
+            }
+
+            .stat h2 {
+                font-size: 28px;
+            }
+
+            .stat p {
+                font-size: 13px;
+            }
+
+            .testimonial {
+                padding: 20px 15px;
+                font-size: 14px;
+                border-left-width: 4px;
+            }
+
+            .cta h2 {
+                font-size: 28px;
+            }
+
+            .cta p {
+                font-size: 15px;
+            }
+        }
+
+        /* SCROLL ANIMATION */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                transform 0.8s cubic-bezier(0.25, 1.15, 0.5, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L1 7v2h22V7L12 2zm2 10h-2v7h2v-7zm6 0h-2v7h2v-7zM8 10H6v7h2v-7zm15 10H1v2h22v-2z" />
+            </svg>
+            <span>RVSCAS MCA</span>
+        </div>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1> <span>MCA Orientation 2026</span></h1>
+
+            <p>
+                Empowering future innovators through collaboration,
+                creativity, and technology. Welcome to a journey where
+                learning meets opportunity.
+            </p>
+
+            <a href="#mission" class="btn">Discover More</a>
+
+        </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section id="mission">
+
+        <h2 class="title reveal">Our Mission</h2>
+
+        <div class="mission">
+
+            <div class="card reveal">
+                <h3>Innovation</h3>
+                <p>
+                    Encourage students to explore modern technologies,
+                    creative thinking, and real-world development.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Collaboration</h3>
+                <p>
+                    Create a platform where students learn by working
+                    together through exciting projects.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Growth</h3>
+                <p>
+                    Build confidence, technical skills,
+                    and leadership for future careers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- UNIQUE HIGHLIGHTS -->
+
+    <section id="highlights">
+
+        <h2 class="title reveal">Our Story & Unique Highlights</h2>
+
+        <div class="highlights-grid">
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">🏫</span>
+                <h3>Estd. 1986 & Legacy</h3>
+                <p>
+                    Established in 1986 in Sulur, Coimbatore, RVS College of Arts and Science (Autonomous) is a premier
+                    destination for transformative higher education, building value-driven global leaders.
+                </p>
+            </div>
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">🏆</span>
+                <h3>NAAC A+ & NIRF Ranked</h3>
+                <p>
+                    Holding a prestigious 'A+' Grade re-accreditation from NAAC and recognized continuously in the
+                    201–300 rank band by NIRF, bridging academic excellence with future-ready skills.
+                </p>
+            </div>
+
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">🤖</span>
+                <h3>Futuristic Curriculum</h3>
+                <p>
+                    Redefining education with bleeding-edge programs like B.Sc. Artificial Intelligence & Machine
+                    Learning (AI & ML) and Data Science alongside core streams.
+                </p>
+            </div>
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">📚</span>
+                <h3>Industry-Blended Learning</h3>
+                <p>
+                    Moving past rote memorization, our autonomous framework incorporates live industry case studies,
+                    practical experimentation, and professional certifications.
+                </p>
+            </div>
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">🎓</span>
+                <h3>90%+ Elite Placements</h3>
+                <p>
+                    We sustain a highly successful campus recruitment rate exceeding 90% annually with top-tier global
+                    multi-national corporations.
+                </p>
+            </div>
+
+            <div class="highlight-card reveal">
+                <span class="highlight-icon">🔬</span>
+                <h3>Research Infrastructure</h3>
+                <p>
+                    Backed by DST-FIST recognition and supported under the prestigious DBT STAR COLLEGE SCHEME, our
+                    advanced labs act as active hubs for real-world scientific inquiry.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROOF -->
+
+    <section>
+
+        <h2 class="title reveal">Achievements</h2>
+
+        <div class="stats">
+
+            <div class="stat reveal">
+                <h2>40+</h2>
+                <p>Students Participated</p>
+            </div>
+
+            <div class="stat reveal">
+                <h2>5+</h2>
+                <p>Creative Pages Built</p>
+            </div>
+
+            <div class="stat reveal">
+                <h2>2026</h2>
+                <p>Orientation Programme</p>
+            </div>
+
+            <div class="stat reveal">
+                <h2>100%</h2>
+                <p>Team Collaboration</p>
+            </div>
+
+        </div>
+
+        <div class="testimonial reveal">
+
+            "Working on this project gave us confidence in
+            HTML & CSS while teaching us the importance
+            of collaboration and creativity."
+
+            <br><br>
+
+            <b>— MCA Student</b>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta reveal">
+
+        <h2>Ready to Explore More?</h2>
+
+        <p>
+            Discover our website and become part of
+            the MCA Orientation 2026 experience.
+        </p>
+
+        <a href="contact.html" class="btn">Contact Us</a>
+
+    </section>
+
+    <footer>
+
+        © 2026 MCA Orientation Programme | Designed & Developed by MCA Students
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll reveal animation observer
+            const observerOptions = {
+                threshold: 0.05,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                let delayCounter = 0;
+                entries.forEach((entry) => {
+                    const el = entry.target;
+                    if (entry.isIntersecting) {
+                        el.style.transitionDelay = `${delayCounter * 100}ms`;
+                        el.classList.add("active");
+                        delayCounter++;
+                    } else {
+                        el.classList.remove("active");
+                        el.style.transitionDelay = "0ms";
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll(".reveal").forEach(el => {
+                observer.observe(el);
+            });
+
+            // Mobile Navigation Toggle
+            const menuBtn = document.getElementById("mobile-menu-btn");
+            const navLinks = document.querySelector(".nav-links");
+
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener("click", () => {
+                    menuBtn.classList.toggle("is-active");
+                    navLinks.classList.toggle("is-active");
+                });
+
+                // Close menu when link is clicked
+                navLinks.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        menuBtn.classList.remove("is-active");
+                        navLinks.classList.remove("is-active");
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
