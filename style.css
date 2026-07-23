@@ -1,0 +1,377 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+    background:#800000;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width:70px;
+    height:70px;
+    margin-right:15px;
+}
+
+.logo-section h2{
+    font-size:22px;
+}
+
+.logo-section p{
+    font-size:14px;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    padding-bottom:5px;
+}
+
+.nav-links a:hover{
+    color:#FFD54F;
+}
+
+.nav-links .active{
+    color:#FFD54F;
+    border-bottom:3px solid #FFD54F;
+}
+
+/* ===========================
+   Banner
+=========================== */
+
+.banner{
+    background:url("images/banner.jpg") center center/cover no-repeat;
+    height:330px;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(128,0,0,.72);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    font-size:22px;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge{
+    margin-top:20px;
+    background:white;
+    color:#800000;
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:600;
+    font-size:17px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    animation:float 3s infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Summary Card
+=========================== */
+
+.summary-card{
+
+    width:320px;
+    margin:40px auto;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    border-top:6px solid #800000;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.summary-card h3{
+
+    color:#800000;
+
+}
+
+.summary-card h1{
+
+    font-size:55px;
+    color:#800000;
+    margin:10px 0;
+
+}
+
+/* ===========================
+   Schedule Section
+=========================== */
+
+.schedule-section{
+
+    width:90%;
+    margin:auto;
+    padding-bottom:60px;
+
+}
+
+.schedule-section h2{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:#800000;
+    font-size:35px;
+
+}
+
+/* ===========================
+   Responsive Table
+=========================== */
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+.schedule-table{
+
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.schedule-table th{
+
+    background:#800000;
+    color:white;
+    padding:18px;
+
+}
+
+.schedule-table td{
+
+    padding:18px;
+    border:1px solid #eee;
+    transition:.3s;
+
+}
+
+/* Alternate Row */
+
+.schedule-table tbody tr:nth-child(even){
+
+    background:#FAF5F5;
+
+}
+
+/* Hover */
+
+.schedule-table tbody tr:hover{
+
+    background:#FFECEC;
+    transform:scale(1.01);
+    box-shadow:0 10px 20px rgba(128,0,0,.20);
+    cursor:pointer;
+
+}
+
+/* Break */
+
+.break{
+
+    background:#FFF6D8 !important;
+
+}
+
+/* Lunch */
+
+.lunch{
+
+    background:#E8F8E8 !important;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    background:#800000;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.header{
+
+    flex-direction:column;
+
+}
+
+.nav-links{
+
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.logo-section{
+
+    text-align:center;
+    flex-direction:column;
+
+}
+
+.logo{
+
+    margin:0 0 10px 0;
+
+}
+
+.overlay h1{
+
+    font-size:34px;
+
+}
+
+.overlay p{
+
+    font-size:18px;
+
+}
+
+.summary-card{
+
+    width:90%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.overlay h1{
+
+    font-size:28px;
+
+}
+
+.overlay p{
+
+    font-size:16px;
+
+}
+
+.badge{
+
+    font-size:15px;
+
+}
+
+.schedule-table th,
+.schedule-table td{
+
+    padding:12px;
+    font-size:14px;
+
+}
+
+}
