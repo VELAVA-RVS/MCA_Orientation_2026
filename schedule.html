@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | MCA Orientation 2026</title>
+</head>
+<style>
+    /* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+    background:#800000;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width:70px;
+    height:70px;
+    margin-right:15px;
+}
+
+.logo-section h2{
+    font-size:22px;
+}
+
+.logo-section p{
+    font-size:14px;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    padding-bottom:5px;
+}
+
+.nav-links a:hover{
+    color:#FFD54F;
+}
+
+.nav-links .active{
+    color:#FFD54F;
+    border-bottom:3px solid #FFD54F;
+}
+
+/* ===========================
+   Banner
+=========================== */
+
+.banner{
+    background:url("images/banner.jpg") center center/cover no-repeat;
+    height:330px;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(128,0,0,.72);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    font-size:22px;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge{
+    margin-top:20px;
+    background:white;
+    color:#800000;
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:600;
+    font-size:17px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    animation:float 3s infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Summary Card
+=========================== */
+
+.summary-card{
+
+    width:320px;
+    margin:40px auto;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    border-top:6px solid #800000;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.summary-card h3{
+
+    color:#800000;
+
+}
+
+.summary-card h1{
+
+    font-size:55px;
+    color:#800000;
+    margin:10px 0;
+
+}
+
+/* ===========================
+   Schedule Section
+=========================== */
+
+.schedule-section{
+
+    width:90%;
+    margin:auto;
+    padding-bottom:60px;
+
+}
+
+.schedule-section h2{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:#800000;
+    font-size:35px;
+
+}
+
+/* ===========================
+   Responsive Table
+=========================== */
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+.schedule-table{
+
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.schedule-table th{
+
+    background:#800000;
+    color:white;
+    padding:18px;
+
+}
+
+.schedule-table td{
+
+    padding:18px;
+    border:1px solid #eee;
+    transition:.3s;
+
+}
+
+/* Alternate Row */
+
+.schedule-table tbody tr:nth-child(even){
+
+    background:#FAF5F5;
+
+}
+
+/* Hover */
+
+.schedule-table tbody tr:hover{
+
+    background:#FFECEC;
+    transform:scale(1.01);
+    box-shadow:0 10px 20px rgba(128,0,0,.20);
+    cursor:pointer;
+
+}
+
+/* Break */
+
+.break{
+
+    background:#FFF6D8 !important;
+
+}
+
+/* Lunch */
+
+.lunch{
+
+    background:#E8F8E8 !important;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    background:#800000;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.header{
+
+    flex-direction:column;
+
+}
+
+.nav-links{
+
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.logo-section{
+
+    text-align:center;
+    flex-direction:column;
+
+}
+
+.logo{
+
+    margin:0 0 10px 0;
+
+}
+
+.overlay h1{
+
+    font-size:34px;
+
+}
+
+.overlay p{
+
+    font-size:18px;
+
+}
+
+.summary-card{
+
+    width:90%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.overlay h1{
+
+    font-size:28px;
+
+}
+
+.overlay p{
+
+    font-size:16px;
+
+}
+
+.badge{
+
+    font-size:15px;
+
+}
+
+.schedule-table th,
+.schedule-table td{
+
+    padding:12px;
+    font-size:14px;
+
+}
+
+}
+</style>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo-section">
+            <!-- Replace with your college logo -->
+            <img src="images.jpeg" alt="RVS College Logo" class="logo">
+
+            <div>
+                <h2>RVS College of Arts and Science (Autonomous)</h2>
+                <p>Department of MCA</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <!-- Active Page -->
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+
+        <div class="overlay">
+
+            <h1>MCA Orientation Programme 2026</h1>
+
+            <p>Day 2 • 23 July 2026</p>
+
+            <!-- Badge -->
+            <span class="badge">📅 Day 2 Schedule</span>
+
+        </div>
+
+    </section>
+
+    <!-- Summary Card -->
+
+    <section class="summary-card">
+
+        <h3>Total Sessions</h3>
+
+        <h1>7</h1>
+
+        <p>Including Seminar, Activities, Verification & Breaks</p>
+
+    </section>
+
+    <!-- Schedule -->
+
+    <section class="schedule-section">
+
+        <h2>Programme Agenda</h2>
+
+        <!-- Responsive Table -->
+
+        <div class="table-responsive">
+
+            <table class="schedule-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>S.No</th>
+
+                        <th>Event</th>
+
+                        <th>Speaker / Incharge</th>
+
+                        <th>Time</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>🎵 Prayer Song</td>
+                        <td>-</td>
+                        <td>09:40 AM - 09:50 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>🎤 Special Address</td>
+                        <td>Dr. G. Purusothaman<br>Associate Professor & Head, MCA</td>
+                        <td>10:00 AM - 11:30 AM</td>
+                    </tr>
+
+                    <tr class="break">
+                        <td>3</td>
+                        <td>☕ Short Break</td>
+                        <td>-</td>
+                        <td>11:30 AM - 11:50 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>💻 Power Seminar on IoT</td>
+                        <td>Dr. P. Navaneetham<br>Director of SCS</td>
+                        <td>11:50 AM - 12:50 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>🤝 Ice Breaking Activities</td>
+                        <td>Mr. L. Velava<br>Faculty, MCA</td>
+                        <td>12:50 PM - 01:50 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>📄 Certificate Verification</td>
+                        <td>Ms. K. Swathy<br>Faculty & Teaching Assistant</td>
+                        <td>01:50 PM - 02:25 PM</td>
+                    </tr>
+
+                    <tr class="lunch">
+                        <td>7</td>
+                        <td>🍽 Lunch Break</td>
+                        <td>-</td>
+                        <td>02:25 PM Onwards</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 MCA Orientation Programme<br>
+            RVS College of Arts and Science (Autonomous), Sulur
+        </p>
+
+    </footer>
+
+</body>
+</html>
